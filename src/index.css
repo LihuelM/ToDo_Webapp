@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #bed68d;
+  background-image: linear-gradient(225deg, #bed68d 0%, #e4edb9 50%, #6bb58e 100%);
+  color: #A5A5A5;
+  font-family: 'Shadows Into Light', 'Quicksand';
+}
+
+#root {
+  margin: 0 24px;
+  position: relative;
+  min-height: 100vh;
+}

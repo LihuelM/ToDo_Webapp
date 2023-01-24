@@ -1,0 +1,16 @@
+.TodoCounter {
+    text-align: center;
+    margin: 0;
+    padding: 48px;
+}
+
+.TodoCounter h1 {
+    font-size: 40px;
+    color: #538074;
+    font-family: 'Shadows Into Light';
+}
+
+.TodoCounter h2 {
+    font-size: 24px;
+    font-family: 'Patrick Hand';
+}
