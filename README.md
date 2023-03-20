@@ -10,3 +10,4 @@ Proyecto en desarrollo, se irá actualizando a medida se avance con los siguient
 Demo del proyecto: https://lihuelm.github.io/ToDo_Webapp/
 
 -------
+![image](https://user-images.githubusercontent.com/110037132/219671215-7566723f-a98b-4abb-b48d-f7bd0b8a6e2a.png)
