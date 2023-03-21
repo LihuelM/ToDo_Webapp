@@ -41,21 +41,39 @@ function App()  {
         />
       </TodoHeader>
 
-      <TodoList>
-        {error && <TodosError error={error} />}
-        {loading && <TodosLoading/>}
-        {(!loading && !searchedTodos.length) && <EmptyTodos/>}
+      <TodoList
+        error={error}
+        loading={loading}
+        totalTodos={totalTodos}
+        searchedTodos={searchedTodos}
+        searchText={searchValue}
+        onError={() => <TodosError />}
+        onLoading={() => <TodosLoading />}
+        onEmptyTodos={() => <EmptyTodos />}
+        onEmptySearchResults={
+          (searchText) => <p>No hay resultados para {searchText}</p>
+          }
+        render={todo => (
+          <TodoItem
+            key={todo.text}
+            text={todo.text}
+            completed={todo.completed}
+            onComplete={() => completeTodo(todo.text)}
+            onDelete={() => deleteTodo(todo.text)}
+          />
+        )}
+      />
 
-        {searchedTodos.map(todo => (
-        <TodoItem 
-          key={todo.text} 
-          text={todo.text} 
-          completed={todo.completed}
-          onComplete={() => completeTodo(todo.text)}
-          onDelete={() => deleteTodo(todo.text)}
-        />
-        ))}
-      </TodoList>
+      {/* Con render Function seria: */}
+      {/* {todo => (
+          <TodoItem
+            key={todo.text}
+            text={todo.text}
+            completed={todo.completed}
+            onComplete={() => completeTodo(todo.text)}
+            onDelete={() => deleteTodo(todo.text)}
+          />
+        )} */}
 
       {!!openModal && (
         <Modal>
